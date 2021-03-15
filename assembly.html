@@ -1,0 +1,54 @@
+<html>
+<title>
+8086 Assembly language
+</title>
+<body>
+<center><h1>8086 Assembly language</h1></center>
+<p>1) Find Average of 19H,20H,27H,30H using assembly 8086?</p>
+<p>A.</p>
+<p>data segment<br>
+array DB 19H,20H,27H,30H<br>
+data ends<br>
+
+code segment<br>
+assume CS:code, DS:data<br>
+start:<br>
+mov ax,data<br>
+mov DS,ax<br>
+mov cl,04H<br>
+mov ax,0000H<br>
+rpt:<br>
+add al,array[SI]<br>
+INC SI<br>
+LOOP rpt<br>
+mov bx, 04h<br>
+div bx<br>
+hlt<br>
+code ends<br>
+end start<br></p>
+
+
+<p>2) Find Average of 21H,25H,28H,82H using assembly 8086?</p>
+<p>A.</p>
+<p>data segment<br>
+array DB 21H,25H,28H,82H<br>
+data ends<br>
+
+code segment<br>
+assume CS:code, DS:data<br>
+start:<br>
+mov ax,data<br>
+mov DS,ax<br>
+mov cl,04H<br>
+mov ax,0000H<br>
+rpt:<br>
+add al,array[SI]<br>
+INC SI<br>
+LOOP rpt<br>
+mov bx, 04h<br>
+div bx<br>
+hlt<br>
+code ends<br>
+end start<br></p>
+</body>
+</html>
